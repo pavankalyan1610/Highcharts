@@ -24,6 +24,9 @@ export class ChartsComponent implements OnInit {
     /* declairing getMonthlyData()*/
     this.getMonthlydata();
   }
+
+
+
   /** defining getAnnualData to plot the charts 
    * @author: shivam
   */
