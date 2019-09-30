@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+$screen-md: 767px;
+/** including fonts for the app*/
+@font-face {
+    font-family: mercury;
+    src: url(./assets/fonts/Mercury-font/Mercury-font.otf);
+}
+
+html{
+    body{
+        font-family: mercury;
+    }
+}
+.page-wrapper{
+    padding-top: 90px !important;
+}
+
+
+/** Responsive styles for small tablets and mobile view starts here */
+@media(max-width:$screen-md){
+   
+        
+        .page-wrapper{
+            padding-top: 70px !important;
+      
+}
+}

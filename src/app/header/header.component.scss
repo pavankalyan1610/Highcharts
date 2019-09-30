@@ -1,0 +1,57 @@
+/** Variables Declaration here */
+$screen-md: 767px;
+$color-white: #fff;
+ 
+
+ /** Styles for the navbar starts here */
+ .app-nav{
+    max-width: 1200px;
+    padding-top:40px;
+    .nav-item{
+        &.nav-link{
+            font-size: 26px;
+            line-height: 1;
+            padding-right: 30px;
+            &:after{
+                position: absolute;
+                content: '';
+                width: 2px;
+                height: 25px;
+                background-color: rgba(0,0,0,.9);
+                right: 12px;
+                top: 50%;
+                transform: translateY(-44%);
+            }
+        }
+        &:last-of-type{
+            &.nav-link:after{
+                display: none;
+            }
+        }
+    }
+}
+/** Styles for the navbar ends here */
+
+
+@media(max-width:$screen-md){
+            .app-nav{
+                padding-top: 10px;
+                .navbar-collapse{
+                    position: absolute;
+                    width: 100%;
+                    z-index: 9;
+                    background: $color-white;
+                    top: 58px;
+                    left: 0px;
+                    padding: 6px;
+                }
+                .nav-item{
+                    &.nav-link{
+                        font-size: 20px;
+                        &:after{
+                            display: none;   
+                        }
+                    }
+                }
+            }
+        }

@@ -1,0 +1,116 @@
+/** Variables Declaration here */
+$page-bg-color: #f2f2f2;
+$color-dark: #000;
+$color-white: #fff;
+$screen-md: 767px;
+$screen-lg: 1080px;
+
+/** Styles for landing page starts here */
+.landing-wrapper{
+    background: $page-bg-color;
+    min-height: 100vh;
+    .custom-container{
+        max-width: 1200px;
+        
+        .content-wrapper{
+            padding: 20px;
+        }
+        .title-block{
+            position: absolute;
+            min-height: 40px;
+            padding: 8px 28px;
+            background: $color-dark;
+            h1{
+                color: $color-white;
+                font-size:28px;
+            }
+        }
+    }
+   
+    /** Styles for the text on hero image starts here */
+    .hero-text{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        padding-right: 48px;
+        h1{
+            font-size: 60px;
+            line-height: 1;
+        }
+        p{
+            padding-bottom: 7px;
+            font-size: 20px;
+        }
+        a{
+            text-decoration: underline;
+            color: #fff;
+        }
+        &:before{
+            position: absolute;
+            top: 12px;
+            display: block;
+            padding: 0;
+            min-width: 36px;
+            height: 100%;
+            content: "";
+            right: 0;
+            background-position: 100% 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../../assets/images/bracket-right.png);
+        }
+    }
+    /** Styles for the text on hero image ends here */
+}
+/** Styles for landing page ends here */
+
+/** MediaQueries for responsive starts from here */
+/** Responsive styles for Tablets and small desktops starts here */
+@media(max-width:$screen-lg){
+    .landing-wrapper{
+        .hero-text{
+            position: static;
+            padding: 16px;
+            background: $color-dark;
+            color: $color-white;
+            margin-bottom: 2px;
+            h1{
+                font-size: 40px;
+                padding-bottom: 10px;
+            }
+            &:before{
+                display: none;
+            }
+        }
+    }  
+}
+/** Responsive styles for Tablets and small desktops ends here */
+
+/** Responsive styles for small tablets and mobile view starts here */
+@media(max-width:$screen-md){
+    .landing-wrapper{
+        .custom-container{
+        .title-block{
+            position: relative;
+            width: 100%;
+            h1{
+                font-size: 22px;
+            }
+        }
+        .hero-text{
+            h1{
+                font-size: 32px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .content-wrapper{
+            padding: 0;
+            padding-top: 70px;
+        }
+        }
+      
+}
+}
+/** Responsive styles for small tablets and mobile view ends here */
