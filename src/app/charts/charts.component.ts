@@ -11,6 +11,7 @@ var annualDataChart: any;
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.scss']
 })
+
 export class ChartsComponent implements OnInit {
   chartData: any = [];
   years: any = [];
